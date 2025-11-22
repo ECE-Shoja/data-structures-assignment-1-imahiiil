@@ -13,14 +13,14 @@ void unionSet(int a, int b) {
     int rootA = findSet(a);
     int rootB = findSet(b);
     if(rootA == rootB) return;
-    if(sz[rootA] < sz[rootB]){
+    if(size[rootA] < size[rootB]){
         parent[rootA] = rootB;
-        sz[rootB] += sz[rootA];
+        size[rootB] += size[rootA];
 }
 
-if(sz[rootA] > sz[rootB]){
+if(size[rootA] > size[rootB]){
     parent[rootB] = rootA;
-    sz[rootA] += sz[rootB];
+    size[rootA] += size[rootB];
     
 }
 }
